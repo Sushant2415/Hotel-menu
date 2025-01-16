@@ -1,0 +1,43 @@
+Menu = {
+    "Pizza" :150,
+    "Pasta" :100,
+    "Maggie" :70,
+    "Burger": 110,
+    "Fries": 90,
+    "Coke": 50,
+    "Cofee": 140,
+    "Sandwich" :120,
+}
+
+print("--------WELCOME TO SUSH'S KITCHEN---------")
+print("Pizza :150\nPasta :100\nMaggie :70\nBurger: 110\nFries: 90\nCoke: 50\nCofee: 140\nSandwich :120")
+
+total_order = 0
+item_1 = input("Enter name of your first order =")
+if item_1 in Menu:
+    total_order += Menu[item_1]
+    print(f"Your item {item_1} has been added to your order :)")
+else:
+    print(f"Your order item {item_1} is not available yet!")    
+
+another_order = input("Do you want to order another item? (Yes/No)")
+if another_order == "Yes":
+    item_2 = input("Enter a name of your 2nd order =")
+    if item_2 in Menu:
+        total_order += Menu[item_2]
+        print(f"Your order item {item_2} has been added to your order :)")
+    else:
+        print(f"Your order item {item_2} is not available!") 
+
+more_order = input("Do you want to order another item? (Yes/No)")
+if more_order == "Yes":
+    item_3 = input("Enter a name of your 3rd order =")
+    if item_3 in Menu:
+        total_order += Menu[item_3]
+        print(f"Your order item {item_3} has been added to your order :)")
+    else:
+        print(f"Your order item {item_3} is not available!") 
+
+
+print(f"The total amount of your orders to pay is {total_order}")           
+print("Thankyou come again")
